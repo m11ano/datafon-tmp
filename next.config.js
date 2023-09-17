@@ -14,4 +14,8 @@ const nextConfig = {
     },
 };
 
-module.exports = nextConfig;
+const withTM = require('next-transpile-modules')(['react-redux']);
+
+module.exports = withTM(nextConfig);
+
+//module.exports = nextConfig;
