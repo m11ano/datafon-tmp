@@ -1,6 +1,7 @@
 import { AppProps } from 'next/app';
 
-import 'app/styles/index.scss';
+import 'app/styles/index.less';
+
 import { Layout } from '../app/layouts/Layout';
 import { StoreProvider } from 'app/providers/StoreProvider';
 import { DeviceProvider } from 'app/providers/DeviceProvider';

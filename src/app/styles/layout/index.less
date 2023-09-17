@@ -1,0 +1,35 @@
+#root {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: table;
+
+    > .content {
+        display: table-row;
+        height: 100%;
+    }
+}
+
+footer {
+    display: table-row;
+}
+
+.support-flex({
+    #root {
+        display: flex;
+        flex-direction: column;
+
+        > .content {
+            display: block;
+            height: auto;
+        }
+    }
+
+    footer {
+        display: block;
+        margin-top: auto;
+        flex-shrink: 0;
+    }
+});
+
+@import './header.less';
+@import './footer.less';

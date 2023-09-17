@@ -1,0 +1,21 @@
+@size-lg: 1024px;
+@size-md: 766px;
+@size-sm: 640px;
+
+.width-size(@size, @content) {
+    @media screen and (max-width: @size) {
+        @content();
+    }
+}
+
+.width-size-lg(@content) {
+    .width-size(@size-lg, @content);
+}
+
+.width-size-md(@content) {
+    .width-size(@size-md, @content);
+}
+
+.width-size-sm(@content) {
+    .width-size(@size-sm, @content);
+}

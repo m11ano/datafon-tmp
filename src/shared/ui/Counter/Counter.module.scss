@@ -1,0 +1,9 @@
+@import 'app/styles/includes';
+
+.Counter {
+    @include width-size-lg(
+        (
+            background: red,
+        )
+    );
+}

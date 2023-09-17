@@ -1,23 +1,6 @@
-import { Device } from 'app/providers/DeviceProvider';
 import React from 'react';
+import { Page } from 'shared/lib/components/Page/';
 
-export default function Home() {
-    return (
-        <div>
-            <Device onlyClient={true}>
-                {(d) => (
-                    <div>
-                        {d.width} {d.isClient ? 'true' : 'false'} - первый
-                    </div>
-                )}
-            </Device>
-            <Device>
-                {(d) => (
-                    <div>
-                        {d.width} {d.isClient ? 'true' : 'false'} - второй
-                    </div>
-                )}
-            </Device>
-        </div>
-    );
+export default function Main() {
+    return <Page title="Главная">Content</Page>;
 }

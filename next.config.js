@@ -12,10 +12,15 @@ const nextConfig = {
 
         return config;
     },
+
+    experimental: {
+        urlImports: ['https://fonts.gstatic.com'],
+    },
 };
 
 const withTM = require('next-transpile-modules')(['react-redux']);
+const withLess = require('next-with-less');
 
-module.exports = withTM(nextConfig);
+module.exports = withTM(withLess(nextConfig));
 
 //module.exports = nextConfig;
