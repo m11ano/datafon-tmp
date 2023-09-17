@@ -15,12 +15,15 @@ export const DeviceProvider = (props: DeviceProviderProps) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(deviceActions.setData(getWindowSize()));
+        setTimeout(() => {
+            dispatch(deviceActions.setIsClient(true));
+            dispatch(deviceActions.setDataSize(getWindowSize()));
+        }, 1000);
 
         const onResize = () => {
             clearTimeout(trottleTimeoutRef.current);
             trottleTimeoutRef.current = setTimeout(() => {
-                dispatch(deviceActions.setData(getWindowSize()));
+                dispatch(deviceActions.setDataSize(getWindowSize()));
             }, 100);
         };
 

@@ -1,6 +1,9 @@
 export interface DeviceData {
-    width: number;
-    height: number;
+    size: {
+        width: number;
+        height: number;
+    };
+    isClient: boolean;
 }
 
 export interface DeviceSchema {

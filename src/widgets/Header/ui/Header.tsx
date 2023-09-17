@@ -1,31 +1,10 @@
-import { ReactNode, memo, useCallback } from 'react';
+import { memo, useCallback } from 'react';
+import { menuList } from 'app/const/menu';
 import classNames from 'classnames';
 
 interface HeaderProps {
     className?: string;
-    children?: ReactNode;
 }
-
-const links = [
-    {
-        title: 'Интернет',
-    },
-    {
-        title: 'Телевидение',
-    },
-    {
-        title: 'Видеонаблюдение',
-    },
-    {
-        title: 'Услуги и сервисы',
-    },
-    {
-        title: 'Отзывы',
-    },
-    {
-        title: 'О компании',
-    },
-];
 
 const toogleBurgerClass = (value?: boolean) => {
     const root = document.body;
@@ -47,9 +26,9 @@ export const Header = memo(function Header(props: HeaderProps) {
         (e: React.MouseEvent<HTMLAnchorElement>) => {
             e.preventDefault();
             const id = Number(e.currentTarget.dataset.id);
-            if (links[id] !== undefined) {
+            if (menuList[id] !== undefined) {
                 toogleBurgerClass(false);
-                console.log(links[id].title);
+                console.log(menuList[id].title);
             }
         },
         [],
@@ -74,7 +53,7 @@ export const Header = memo(function Header(props: HeaderProps) {
                 <div className="block-menu">
                     <div className="logo"></div>
                     <div className="menu">
-                        {links.map((link, i) => (
+                        {menuList.map((link, i) => (
                             <a
                                 href="#"
                                 key={i}
@@ -94,7 +73,7 @@ export const Header = memo(function Header(props: HeaderProps) {
                     </div>
                 </div>
                 <div className="block-mobile-menu">
-                    {links.map((link, i) => (
+                    {menuList.map((link, i) => (
                         <a href="#" key={i} data-id={i} onClick={onMenuClick}>
                             {link.title}
                         </a>

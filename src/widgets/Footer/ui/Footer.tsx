@@ -1,9 +1,8 @@
-import { ReactNode, memo } from 'react';
+import { memo } from 'react';
 import classNames from 'classnames';
 
 interface HeaderProps {
     className?: string;
-    children?: ReactNode;
 }
 
 export const Footer = memo(function Footer(props: HeaderProps) {

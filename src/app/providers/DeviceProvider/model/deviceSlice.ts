@@ -3,8 +3,11 @@ import { DeviceData, DeviceSchema } from './types';
 
 const initialState: DeviceSchema = {
     data: {
-        width: 0,
-        height: 0,
+        size: {
+            width: 0,
+            height: 0,
+        },
+        isClient: false,
     },
 };
 
@@ -12,8 +15,15 @@ export const deviceSlice = createSlice({
     name: 'device',
     initialState,
     reducers: {
-        setData: (state, action: PayloadAction<DeviceData>) => {
-            state.data = action.payload;
+        setDataSize: (state, action: PayloadAction<DeviceData['size']>) => {
+            if (state.data) {
+                state.data.size = action.payload;
+            }
+        },
+        setIsClient: (state, action: PayloadAction<boolean>) => {
+            if (state.data) {
+                state.data.isClient = action.payload;
+            }
         },
     },
 });
