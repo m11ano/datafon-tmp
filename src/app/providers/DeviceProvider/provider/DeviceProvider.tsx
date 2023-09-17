@@ -1,6 +1,7 @@
 import { ReactNode, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { deviceActions, getWindowSize } from 'shared/lib/components/Device';
+import { deviceActions } from '../model/deviceSlice';
+import { getWindowSize } from '../lib/getWindowSize';
 
 interface DeviceProviderProps {
     children?: ReactNode;

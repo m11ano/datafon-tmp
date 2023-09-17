@@ -1,5 +1,5 @@
+import { Device } from 'app/providers/DeviceProvider';
 import React from 'react';
-import { Device } from 'shared/lib/components/Device';
 
 export default function Home() {
     return (

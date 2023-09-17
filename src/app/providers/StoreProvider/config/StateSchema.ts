@@ -1,4 +1,4 @@
-import { DeviceSchema } from 'shared/lib/components/Device/model/types';
+import { DeviceSchema } from 'app/providers/DeviceProvider';
 
 export interface StateSchema {
     device: DeviceSchema;

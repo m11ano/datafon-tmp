@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { deviceReducer } from 'shared/lib/components/Device';
+import { deviceReducer } from 'app/providers/DeviceProvider';
 
 const store = configureStore({
     reducer: {

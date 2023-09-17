@@ -3,7 +3,7 @@ import { AppProps } from 'next/app';
 import 'app/styles/index.scss';
 import { Layout } from '../app/layouts/Layout';
 import { StoreProvider } from 'app/providers/StoreProvider';
-import { DeviceProvider } from 'shared/lib/components/Device';
+import { DeviceProvider } from 'app/providers/DeviceProvider';
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
