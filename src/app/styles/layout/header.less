@@ -1,2 +1,209 @@
 header {
+    .block-top {
+        padding: 25px 0 30px;
+        font-size: 14px;
+    }
+
+    .block-menu {
+        display: flex;
+        align-items: center;
+
+        > .logo {
+            flex-shrink: 0;
+            width: 194px;
+            height: 48px;
+            background: url('/icons/logo_Datafon.svg') no-repeat;
+            background-size: 100% 100%;
+        }
+
+        > .menu {
+            display: flex;
+            margin-left: auto;
+
+            > a {
+                margin-right: 30px;
+                font-size: 18px;
+                color: @color-primary;
+                text-decoration: none;
+                font-weight: 500;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                &:last-child {
+                    margin-right: 0 !important;
+                }
+            }
+        }
+
+        > .mobile-menu {
+            display: none;
+            margin-left: auto;
+
+            > .burger {
+                > a {
+                    display: flex;
+                    align-items: center;
+                    height: 26px;
+                    width: 33px;
+                    font-size: 0;
+
+                    > span {
+                        display: block;
+                        height: 5px;
+                        width: 33px;
+                        background: @color-primary;
+                        position: relative;
+                        border-radius: 5px;
+
+                        &::before {
+                            content: '';
+                            display: block;
+                            position: relative;
+                            height: 5px;
+                            width: 33px;
+                            background: @color-primary;
+                            top: -10px;
+                            border-radius: 5px;
+                            transition:
+                                top 0.3s,
+                                transform 0.3s;
+                        }
+
+                        &::after {
+                            content: '';
+                            display: block;
+                            position: relative;
+                            height: 5px;
+                            width: 33px;
+                            background: @color-primary;
+                            top: 5px;
+                            border-radius: 5px;
+                            transition:
+                                top 0.3s,
+                                transform 0.3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .block-mobile-menu {
+        display: none;
+        padding: 30px 0;
+
+        > a {
+            display: block;
+            margin-top: 20px;
+            font-size: 18px;
+            color: @color-primary;
+            text-decoration: none;
+            font-weight: 500;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &:first-child {
+                margin-top: 0 !important;
+            }
+        }
+    }
+
+    .width-size(
+        1200px, 
+        {
+            .block-top {
+                font-size: 13px;
+            }
+        }
+    );
+
+    .width-size(
+        1170px, 
+        {
+            .block-menu {
+                > .menu {
+                    > a {
+                        font-size:16px;
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    );
+
+    .width-size(
+        1000px, 
+        {
+            .block-top {
+                display: none;
+            }
+
+            .block-menu {
+                padding-top:20px;
+
+                > .menu {
+                    display: none;
+                }
+        
+                > .mobile-menu {
+                    display: block;
+                }
+            }
+        }
+    );
 }
+
+.width-size(
+    1000px,
+    {
+        body.burger-menu-opened {
+            background-color:#ccc;
+
+            #root {
+                > *:not(.content) {
+                    display:none;
+                }
+
+                > .content > *:not(header) {
+                    display:none;
+                }
+
+                header {
+                    .block-menu {
+                        > .mobile-menu {
+                            > .burger {
+                                > a {
+                                    > span {
+                                        background:none;
+
+                                        &:before {
+                                            transform:rotate(-45deg);
+                                            top:0;
+                                            left:0;
+                                            position:absolute;
+                                        }
+
+                                        &:after {
+                                            transform:rotate(45deg);
+                                            top:0;
+                                            left:0;
+                                            position:absolute;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .block-mobile-menu {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+);

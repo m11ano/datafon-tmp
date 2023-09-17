@@ -36,6 +36,7 @@
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "error",
         "no-undef": "off",
-        "react/jsx-max-props-per-line": ["error", { "maximum": 4 }]
+        "react/jsx-max-props-per-line": ["error", { "maximum": 4 }],
+        "@next/next/no-html-link-for-pages": "warn"
     }
 }

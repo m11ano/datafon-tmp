@@ -1,12 +1,12 @@
 import Head from 'next/head';
-import { ReactNode } from 'react';
+import { ReactNode, memo } from 'react';
 
 interface PageProps {
     children?: ReactNode;
     title?: string;
 }
 
-export const Page = (props: PageProps) => {
+export const Page = memo(function Page(props: PageProps) {
     const { children, title } = props;
 
     return (
@@ -15,4 +15,4 @@ export const Page = (props: PageProps) => {
             {children}
         </>
     );
-};
+});

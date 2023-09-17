@@ -1,9 +1,13 @@
-@import './lib/index.less';
+@import './include';
 @import './clear';
 @import 'shared/assets/fonts/Ubuntu';
 
 body {
     font-family: Ubuntu, sans-serif;
+    color: @color-primary;
+    background-color: #fff;
+    transition: background-color 0.3s;
 }
 
+@import './std';
 @import './layout';

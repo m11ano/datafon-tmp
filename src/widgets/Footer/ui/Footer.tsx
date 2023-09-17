@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, memo } from 'react';
 import classNames from 'classnames';
 
 interface HeaderProps {
@@ -6,7 +6,11 @@ interface HeaderProps {
     children?: ReactNode;
 }
 
-export const Footer = (props: HeaderProps) => {
+export const Footer = memo(function Footer(props: HeaderProps) {
     const { className } = props;
-    return <footer className={classNames([className])}>Подвал сайта!</footer>;
-};
+    return (
+        <footer className={className ? classNames([className]) : undefined}>
+            <div className="std-wrapper">11</div>
+        </footer>
+    );
+});
