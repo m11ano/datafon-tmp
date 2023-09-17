@@ -1,6 +1,6 @@
 export interface DeviceData {
-    width?: number;
-    height?: number;
+    width: number;
+    height: number;
 }
 
 export interface DeviceSchema {

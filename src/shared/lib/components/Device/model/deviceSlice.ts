@@ -3,8 +3,8 @@ import { DeviceData, DeviceSchema } from './types';
 
 const initialState: DeviceSchema = {
     data: {
-        width: 111,
-        height: 222,
+        width: 0,
+        height: 0,
     },
 };
 

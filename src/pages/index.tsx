@@ -1,11 +1,23 @@
 import React from 'react';
-import Device from 'shared/lib/components/Device/ui';
+import { Device } from 'shared/lib/components/Device';
 
 export default function Home() {
     return (
         <div>
-            <Device>{(d) => <div>{d.width} - 1</div>}</Device>
-            <Device>{(d) => <div>{d.width} - 2</div>}</Device>
+            <Device onlyClient={true}>
+                {(d) => (
+                    <div>
+                        {d.width} {d.isClient ? 'true' : 'false'} - первый
+                    </div>
+                )}
+            </Device>
+            <Device>
+                {(d) => (
+                    <div>
+                        {d.width} {d.isClient ? 'true' : 'false'} - второй
+                    </div>
+                )}
+            </Device>
         </div>
     );
 }
