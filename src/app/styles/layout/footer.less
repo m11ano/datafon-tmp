@@ -1,2 +1,96 @@
-footer {
+#footer {
+    border-top: 1px solid #e7e8e8;
+    padding: 50px 0 60px;
+
+    > .block-logo {
+        > div {
+            width: 194px;
+            height: 48px;
+            background: url('/icons/logo_Datafon.svg') no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+
+    > .block-menu {
+        display: flex;
+        margin-top: 35px;
+
+        > .menu {
+            flex-basis: 285px;
+            flex-shrink: 0;
+            padding: 0 0 0 57px;
+
+            > a {
+                display: block;
+                margin-top: 20px;
+                font-size: 18px;
+                color: @color-primary;
+                text-decoration: none;
+                font-weight: 500;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                &:first-child {
+                    margin-top: 0 !important;
+                }
+            }
+        }
+
+        > .desc {
+            flex-grow: 1;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+    }
+
+    > .up {
+        padding: 60px 0 0;
+
+        > a {
+            display: block;
+            width: 60px;
+            margin: 0 auto;
+            color: @color-red;
+
+            > .title {
+                display: block;
+                margin-top: 10px;
+                font-size: 13px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .width-size(1000px, {
+
+        padding: 40px 0 40px 0;
+
+        > .block-logo {
+            > div {
+                margin:0 auto;
+            }
+        }
+
+        > .block-menu {
+
+            > .menu {
+                display: none;
+            }
+
+            > .desc {
+                font-size:12px;
+            }
+        }
+
+        > .up {
+            padding: 40px 0 0;
+        }
+    });
 }

@@ -10,17 +10,23 @@ export default function Main() {
 
     return (
         <Page title="Главная">
-            Content {data.size.width} / {data.isClient ? 'true' : 'false'}
+            <div>
+                Content {data.size.width} / {data.isClient ? 'true' : 'false'}
+            </div>
             <div>Value = {value}</div>
             <div>
-                <span
-                    onClick={() => {
-                        setValue((v) => v + 1);
-                    }}
-                >
-                    Add
-                </span>
+                ff
+                <div>
+                    <span
+                        onClick={() => {
+                            setValue((v) => v + 1);
+                        }}
+                    >
+                        Add
+                    </span>
+                </div>
             </div>
+            <div>GGG</div>
         </Page>
     );
 }

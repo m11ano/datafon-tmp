@@ -14,15 +14,9 @@ export const Device = (props: DeviceProps) => {
     const { children, onlyClient = false } = props;
     const data = useSelector(getDeviceData);
 
-    const childrenProps = useMemo<DeviceChildrenProps>(() => {
-        return data;
-    }, [data]);
-
-    return (
-        <>
-            {(data.isClient && onlyClient) || !onlyClient
-                ? children(childrenProps)
-                : null}
-        </>
-    );
+    return useMemo(() => {
+        return (data.isClient && onlyClient) || !onlyClient
+            ? children(data)
+            : null;
+    }, [data, onlyClient, children]);
 };
