@@ -29,4 +29,33 @@
             background-size: 13px 32px;
         }
     }
+
+    &.std-icon-internet {
+        &::before {
+            background-image: url('/icons/internet.svg');
+            background-size: 36px 36px;
+        }
+    }
+}
+
+.std-title-wi {
+    display: flex;
+    align-items: center;
+
+    > span {
+        flex-shrink: 0;
+    }
+
+    > div {
+        padding: 0 0 0 20px;
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .width-size-sm({
+        > div {
+            font-size:22px;
+            padding:0 0 0 10px;
+        }
+    });
 }

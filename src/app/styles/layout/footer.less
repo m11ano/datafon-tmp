@@ -1,6 +1,8 @@
 #footer {
     border-top: 1px solid #e7e8e8;
     padding: 50px 0 60px;
+    max-width: calc(100vw - @std-x-padding-double);
+    overflow: hidden;
 
     > .block-logo {
         > div {
@@ -39,9 +41,11 @@
         }
 
         > .desc {
-            flex-grow: 1;
+            //flex-grow: 1;
             font-size: 16px;
             line-height: 1.7;
+            overflow: hidden;
+            max-width: 100%;
         }
     }
 
@@ -92,5 +96,9 @@
         > .up {
             padding: 40px 0 0;
         }
+    });
+
+    .width-size-sm({
+        max-width: calc(100vw - @std-x-padding-sm-double);
     });
 }

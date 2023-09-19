@@ -7,6 +7,9 @@ export const getDeviceData = (state: StateSchema) => {
                 width: 0,
                 height: 0,
             },
+            checks: {
+                flexGap: true,
+            },
             isClient: false,
         }
     );

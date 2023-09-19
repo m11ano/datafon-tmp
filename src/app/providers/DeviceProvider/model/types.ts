@@ -3,6 +3,9 @@ export interface DeviceData {
         width: number;
         height: number;
     };
+    checks: {
+        flexGap: boolean;
+    };
     isClient: boolean;
 }
 

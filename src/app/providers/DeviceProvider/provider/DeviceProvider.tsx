@@ -2,6 +2,7 @@ import { ReactNode, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { deviceActions } from '../model/deviceSlice';
 import { getWindowSize } from '../lib/getWindowSize';
+import { checkFlexGap } from '../lib/checkFlexGap';
 
 interface DeviceProviderProps {
     children?: ReactNode;
@@ -17,6 +18,7 @@ export const DeviceProvider = (props: DeviceProviderProps) => {
     useEffect(() => {
         dispatch(deviceActions.setIsClient(true));
         dispatch(deviceActions.setDataSize(getWindowSize()));
+        dispatch(deviceActions.setCheckFlexGap(checkFlexGap()));
 
         const onResize = () => {
             clearTimeout(trottleTimeoutRef.current);

@@ -7,6 +7,9 @@ const initialState: DeviceSchema = {
             width: 0,
             height: 0,
         },
+        checks: {
+            flexGap: true,
+        },
         isClient: false,
     },
 };
@@ -18,6 +21,11 @@ export const deviceSlice = createSlice({
         setDataSize: (state, action: PayloadAction<DeviceData['size']>) => {
             if (state.data) {
                 state.data.size = action.payload;
+            }
+        },
+        setCheckFlexGap: (state, action: PayloadAction<boolean>) => {
+            if (state.data) {
+                state.data.checks.flexGap = action.payload;
             }
         },
         setIsClient: (state, action: PayloadAction<boolean>) => {

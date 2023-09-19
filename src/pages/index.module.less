@@ -169,3 +169,146 @@
         }
     }
 }
+
+#main_block_internet {
+    margin-top: 100px;
+
+    .content {
+        margin-top: 40px;
+
+        > .desc {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        > .items {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 40px;
+            column-gap: 40px;
+
+            > div {
+                flex-shrink: 0;
+                overflow: hidden;
+                max-width: 400px;
+            }
+        }
+    }
+
+    .width-size-min(1170px, {
+        .content {
+            > .items {
+                > div {
+                    flex-basis: calc((100% - 120px) / 4);
+                }
+            }
+        }
+    });
+
+    .width-size(1170px, {
+        .content {
+            > .items {
+                > div {
+                    flex-basis: calc((100% - 80px) / 3);
+                }
+            }
+        }
+    });
+
+    .width-size(1000px, {
+        .content {
+            > .items {
+                > div {
+                    flex-basis: calc((100% - 40px) / 2);
+                }
+            }
+        }
+    });
+
+    .width-size-sm({
+        margin-top:40px;
+
+        .content {
+            margin-top:30px;
+    
+            > .desc {
+                font-size:12px;
+            }
+
+            > .items {
+                justify-content: center;
+
+                > div {
+                    flex-basis: 100%;
+                }
+            }
+        }
+    });
+
+    &.noFlexGap {
+        .content {
+            > .items {
+                justify-content: space-between;
+
+                > div {
+                    margin-top: 40px;
+                }
+            }
+        }
+
+        .width-size-sm({
+            .content {
+                > .items {
+                    justify-content: center;
+                }
+            }
+        });
+    }
+}
+
+.internetTariffCard {
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgb(0 0 0 / 25%);
+    padding: 30px 30px 25px;
+
+    > .title {
+        font-weight: 500;
+        font-size: 30px;
+    }
+
+    > .desc {
+        font-size: 14px;
+        padding-top: 10px;
+    }
+
+    > .speed {
+        margin-top: 20px;
+
+        > .t {
+            font-size: 14px;
+            line-height: 1;
+        }
+
+        > .v {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+
+    > .price {
+        margin-top: 15px;
+
+        > .t {
+            font-size: 14px;
+            line-height: 1;
+        }
+
+        > .v {
+            font-size: 20px;
+            font-weight: bold;
+            color: @color-red;
+        }
+    }
+}

@@ -19,3 +19,9 @@
 .width-size-sm(@content) {
     .width-size(@size-sm, @content);
 }
+
+.width-size-min(@size, @content) {
+    @media screen and (min-width: @size) {
+        @content();
+    }
+}
