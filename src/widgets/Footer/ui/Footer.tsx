@@ -20,6 +20,10 @@ export const Footer = memo(function Footer(props: HeaderProps) {
         [],
     );
 
+    const onUpClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+    }, []);
+
     return (
         <footer className={className ? classNames([className]) : undefined}>
             <div className="std-wrapper">
@@ -64,7 +68,7 @@ export const Footer = memo(function Footer(props: HeaderProps) {
                         </div>
                     </div>
                     <div className="up">
-                        <a href="#">
+                        <a href="#" onClick={onUpClick}>
                             <span className="std-icon std-icon-up"></span>
                             <span className="title">Наверх</span>
                         </a>

@@ -11,6 +11,7 @@
         "color-no-invalid-hex": null,
         "less/color-no-invalid-hex": null,
         "less/no-duplicate-variables": null,
-        "no-descending-specificity": null
+        "no-descending-specificity": null,
+        "selector-id-pattern": null
     }
 }

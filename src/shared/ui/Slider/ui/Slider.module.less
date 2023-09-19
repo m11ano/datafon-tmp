@@ -1,0 +1,112 @@
+@import 'app/styles/include';
+
+.Slider {
+    width: 100%;
+}
+
+.slidersWrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    touch-action: pan-x pinch-zoom;
+}
+
+.sliders {
+    display: flex;
+    position: relative;
+    z-index: 1;
+
+    > .item,
+    > .itemLastCopy,
+    > .itemFirstCopy {
+        flex-shrink: 0;
+    }
+}
+
+.pointsWrapper {
+    font-size: 0;
+    padding: 30px 0 0;
+
+    // .sm-block({
+    //     padding:10px 0 0 0;
+    // });
+}
+
+.points {
+    display: block;
+    margin: 0 auto;
+    width: 210px;
+    overflow: hidden;
+}
+
+.pointsItems {
+    display: table;
+    table-layout: fixed;
+
+    > div {
+        display: table-cell;
+        vertical-align: middle;
+
+        > a {
+            display: block;
+            cursor: pointer;
+            width: 42px;
+            font-size: 0;
+            text-decoration: none;
+
+            > span {
+                display: block;
+                margin: 0 auto;
+                width: 12px;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 8px;
+                    height: 8px;
+                    background: @color-red;
+                    border-radius: 12px;
+                }
+            }
+        }
+
+        &.b2 {
+            > a {
+                > span {
+                    &::after {
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+            }
+        }
+
+        &.b3 {
+            > a {
+                > span {
+                    border: 2px solid #898989;
+                    padding: 3px;
+                    width: 22px;
+                    border-radius: 40px;
+
+                    &::after {
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.SliderItem {
+    position: relative;
+
+    > * {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
