@@ -1,3 +1,4 @@
+import { Layout } from 'app/layouts/Layout';
 import Head from 'next/head';
 import { ReactNode } from 'react';
 
@@ -12,7 +13,7 @@ export const Page = (props: PageProps) => {
     return (
         <>
             <Head>{title && <title>{title}</title>}</Head>
-            {children}
+            <Layout>{children}</Layout>
         </>
     );
 };

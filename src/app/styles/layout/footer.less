@@ -3,6 +3,7 @@
     padding: 50px 0 60px;
     max-width: calc(100vw - @std-x-padding-double);
     overflow: hidden;
+    margin-top: 100px;
 
     > .block-logo {
         > div {
@@ -26,7 +27,7 @@
                 display: block;
                 margin-top: 20px;
                 font-size: 18px;
-                color: @color-primary;
+                color: #colors[primary];
                 text-decoration: none;
                 font-weight: 500;
 
@@ -56,7 +57,7 @@
             display: block;
             width: 60px;
             margin: 0 auto;
-            color: @color-red;
+            color: #colors[red];
 
             > .title {
                 display: block;
@@ -99,6 +100,7 @@
     });
 
     .width-size-sm({
+        margin-top:60px;
         max-width: calc(100vw - @std-x-padding-sm-double);
     });
 }

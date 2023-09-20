@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+    datafone_tmp:
+        container_name: datafone_tmp
+        build: .
+        restart: always
+        ports:
+            - 127.0.0.1:3000:3000

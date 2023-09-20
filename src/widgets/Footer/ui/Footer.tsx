@@ -1,6 +1,7 @@
 import { memo, useCallback } from 'react';
 import classNames from 'classnames';
 import { menuList } from 'app/const/menu';
+import { windowScrollTo, windowScrollToBlock } from 'shared/lib/scroll/scroll';
 
 interface HeaderProps {
     className?: string;
@@ -14,7 +15,10 @@ export const Footer = memo(function Footer(props: HeaderProps) {
             e.preventDefault();
             const id = Number(e.currentTarget.dataset.id);
             if (menuList[id] !== undefined) {
-                console.log(menuList[id].title);
+                windowScrollToBlock(
+                    menuList[id].scrollTarget,
+                    window.innerWidth >= 1200 ? 120 : 50,
+                );
             }
         },
         [],
@@ -22,6 +26,7 @@ export const Footer = memo(function Footer(props: HeaderProps) {
 
     const onUpClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
+        windowScrollTo(0);
     }, []);
 
     return (
@@ -34,7 +39,7 @@ export const Footer = memo(function Footer(props: HeaderProps) {
                     <div className="block-menu">
                         <div className="menu">
                             {menuList.map((link, i) => {
-                                if (i != 5) {
+                                if (i != 4) {
                                     return (
                                         <a
                                             href="#"

@@ -1,88 +1,98 @@
 header {
-    .block-top {
-        padding: 25px 0 30px;
+    > .block-top {
+        padding: 25px 0 15px;
         font-size: 14px;
     }
 
-    .block-menu {
-        display: flex;
-        align-items: center;
+    > .block-menu-wrapper {
+        > div {
+            padding: 15px 0;
 
-        > .logo {
-            flex-shrink: 0;
-            width: 194px;
-            height: 48px;
-            background: url('/icons/logo_Datafon.svg') no-repeat;
-            background-size: 100% 100%;
-        }
+            .block-menu {
+                display: flex;
+                align-items: center;
 
-        > .menu {
-            display: flex;
-            margin-left: auto;
-
-            > a {
-                margin-right: 30px;
-                font-size: 18px;
-                color: @color-primary;
-                text-decoration: none;
-                font-weight: 500;
-
-                &:hover {
-                    text-decoration: underline;
+                > .logo {
+                    flex-shrink: 0;
+                    width: 194px;
+                    height: 48px;
+                    background: url('/icons/logo_Datafon.svg') no-repeat;
+                    background-size: 100% 100%;
                 }
 
-                &:last-child {
-                    margin-right: 0 !important;
-                }
-            }
-        }
-
-        > .mobile-menu {
-            display: none;
-            margin-left: auto;
-
-            > .burger {
-                > a {
+                > .menu {
                     display: flex;
-                    align-items: center;
-                    height: 26px;
-                    width: 33px;
-                    font-size: 0;
+                    margin-left: auto;
 
-                    > span {
-                        display: block;
-                        height: 5px;
-                        width: 33px;
-                        background: @color-primary;
-                        position: relative;
-                        border-radius: 5px;
+                    > a {
+                        margin-right: 30px;
+                        font-size: 18px;
+                        color: #colors[primary];
+                        text-decoration: none;
+                        font-weight: 500;
 
-                        &::before {
-                            content: '';
-                            display: block;
-                            position: relative;
-                            height: 5px;
-                            width: 33px;
-                            background: @color-primary;
-                            top: -10px;
-                            border-radius: 5px;
-                            transition:
-                                top 0.3s,
-                                transform 0.3s;
+                        &.marked {
+                            color: #colors[red];
                         }
 
-                        &::after {
-                            content: '';
-                            display: block;
-                            position: relative;
-                            height: 5px;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+
+                        &:last-child {
+                            margin-right: 0 !important;
+                        }
+                    }
+                }
+
+                > .mobile-menu {
+                    display: none;
+                    margin-left: auto;
+
+                    > .burger {
+                        > a {
+                            display: flex;
+                            align-items: center;
+                            height: 26px;
                             width: 33px;
-                            background: @color-primary;
-                            top: 5px;
-                            border-radius: 5px;
-                            transition:
-                                top 0.3s,
-                                transform 0.3s;
+                            font-size: 0;
+
+                            > span {
+                                display: block;
+                                height: 5px;
+                                width: 33px;
+                                background: #colors[primary];
+                                position: relative;
+                                border-radius: 5px;
+
+                                &::before {
+                                    content: '';
+                                    display: block;
+                                    position: relative;
+                                    height: 5px;
+                                    width: 33px;
+                                    background: #colors[primary];
+                                    top: -10px;
+                                    border-radius: 5px;
+                                    transition:
+                                        top 0.3s,
+                                        transform 0.3s;
+                                }
+
+                                &::after {
+                                    content: '';
+                                    display: block;
+                                    position: relative;
+                                    height: 5px;
+                                    width: 33px;
+                                    background: #colors[primary];
+                                    top: 5px;
+                                    border-radius: 5px;
+                                    transition:
+                                        top 0.3s,
+                                        transform 0.3s;
+                                }
+                            }
                         }
                     }
                 }
@@ -92,13 +102,13 @@ header {
 
     .block-mobile-menu {
         display: none;
-        padding: 30px 0;
+        .std-wrapper(30px, 30px);
 
         > a {
             display: block;
             margin-top: 20px;
             font-size: 18px;
-            color: @color-primary;
+            color: #colors[primary];
             text-decoration: none;
             font-weight: 500;
 
@@ -115,7 +125,7 @@ header {
     .width-size(
         1200px, 
         {
-            .block-top {
+            > .block-top {
                 font-size: 13px;
             }
         }
@@ -124,11 +134,15 @@ header {
     .width-size(
         1170px, 
         {
-            .block-menu {
-                > .menu {
-                    > a {
-                        font-size:16px;
-                        margin-right: 20px;
+            > .block-menu-wrapper {
+                > div {
+                    .block-menu {
+                        > .menu {
+                            > a {
+                                font-size:16px;
+                                margin-right: 20px;
+                            }
+                        }
                     }
                 }
             }
@@ -138,19 +152,44 @@ header {
     .width-size(
         1000px, 
         {
-            .block-top {
+            > .block-top {
                 display: none;
             }
 
-            .block-menu {
-                padding-top:20px;
+            > .block-menu-wrapper {
+                > div {
+                    .block-menu {
+                        padding-top:20px; 
 
-                > .menu {
-                    display: none;
+                        > .menu {
+                            display: none;
+                        }
+                
+                        > .mobile-menu {
+                            display: block;
+                        }
+                    }
                 }
-        
-                > .mobile-menu {
-                    display: block;
+            }
+        }
+    );
+
+    .width-size-min(
+        1000px, 
+        {
+            &.fixed {
+                > .block-menu-wrapper {
+                    height: 78px;
+
+                    > div {
+                        position: fixed;
+                        background: #fff;
+                        z-index: 1000;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+                    }
                 }
             }
         }
@@ -173,25 +212,27 @@ header {
                 }
 
                 header {
-                    .block-menu {
-                        > .mobile-menu {
-                            > .burger {
-                                > a {
-                                    > span {
-                                        background:none;
+                    > .block-menu-wrapper {
+                        .block-menu {
+                            > .mobile-menu {
+                                > .burger {
+                                    > a {
+                                        > span {
+                                            background:none;
 
-                                        &:before {
-                                            transform:rotate(-45deg);
-                                            top:0;
-                                            left:0;
-                                            position:absolute;
-                                        }
+                                            &:before {
+                                                transform:rotate(-45deg);
+                                                top:0;
+                                                left:0;
+                                                position:absolute;
+                                            }
 
-                                        &:after {
-                                            transform:rotate(45deg);
-                                            top:0;
-                                            left:0;
-                                            position:absolute;
+                                            &:after {
+                                                transform:rotate(45deg);
+                                                top:0;
+                                                left:0;
+                                                position:absolute;
+                                            }
                                         }
                                     }
                                 }
@@ -199,7 +240,7 @@ header {
                         }
                     }
 
-                    .block-mobile-menu {
+                    > .block-mobile-menu {
                         display: block;
                     }
                 }
