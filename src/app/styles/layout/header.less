@@ -204,11 +204,19 @@ header {
 
             #root {
                 > *:not(.content) {
-                    display:none;
+                    //display:none;
+                    width:1px;
+                    height:1px;
+                    opacity: 0;
+                    overflow: hidden;
                 }
 
                 > .content > *:not(header) {
-                    display:none;
+                    //display:none;
+                    width:1px;
+                    height:1px;
+                    opacity: 0;
+                    overflow: hidden;
                 }
 
                 header {
