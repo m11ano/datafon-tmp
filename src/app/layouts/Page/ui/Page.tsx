@@ -1,4 +1,4 @@
-import { Layout } from 'app/layouts/Layout';
+import { Layout } from 'app/layouts/Layout/Layout';
 import Head from 'next/head';
 import { ReactNode } from 'react';
 

@@ -1,10 +1,11 @@
 import React, { useMemo } from 'react';
-import { Page } from 'shared/lib/components/Page/';
 import cls from './index.module.less';
 import { Slider, SliderPropsItem, SliderPropsSize } from 'shared/ui/Slider/';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { getDeviceData, onDeviceWidth } from 'app/providers/DeviceProvider';
 import { useSelector } from 'react-redux';
+import { Page } from 'app/layouts/Page';
+import classNames from 'classnames';
 
 import Image from 'next/image';
 
@@ -12,7 +13,6 @@ import domofonIcon from '/public/icons/domofon.svg';
 import phoneIcon from '/public/icons/phone.svg';
 import houseIcon from '/public/icons/smarthouse.svg';
 import lockIcon from '/public/icons/signal.svg';
-import classNames from 'classnames';
 
 export const getStaticProps: GetStaticProps<{
     sliderItems: {
