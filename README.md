@@ -1,3 +1,3 @@
-Temporary  page for datafone.ru
-NextJs, React, FSD arch
+Temporary page for datafone.ru<br />
+NextJs, React, FSD arch<br />
 Works on legacy browsers since IE11
