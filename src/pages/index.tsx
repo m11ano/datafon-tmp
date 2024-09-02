@@ -509,6 +509,54 @@ export default function Main(
                     </div>
                 </div>
             </div>
+            <div className="std-wrapper">
+                <div className={cls.mainContacts}>
+                    <div className="std-title-wi">
+                        <span className="std-icon std-icon-phone"></span>
+                        <div>Контакты</div>
+                    </div>
+                    <div className={cls.items}>
+                        <div>
+                            <div className="std-title-m">
+                                <span className="std-icon std-icon-connect"></span>
+                            </div>
+                            <div className={cls.text}>
+                                <div className={cls.title}>Подключение:</div>
+                                <div className={cls.phone}>
+                                    <a href="tel:+74957890915">
+                                        +7 (495) 789-09-15
+                                    </a>
+                                </div>
+                                <div className={cls.email}>
+                                    e-mail:{' '}
+                                    <a href="mailto:sale@data-fone.ru">
+                                        sale@data-fone.ru
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="std-title-m">
+                                <span className="std-icon std-icon-support"></span>
+                            </div>
+                            <div className={cls.text}>
+                                <div className={cls.title}>Техподдержка:</div>
+                                <div className={cls.phone}>
+                                    <a href="tel:+74957890916">
+                                        +7 (495) 789-09-16
+                                    </a>
+                                </div>
+                                <div className={cls.email}>
+                                    e-mail:{' '}
+                                    <a href="mailto:sale@data-fone.ru">
+                                        support@data-fone.ru
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </Page>
     );
 }

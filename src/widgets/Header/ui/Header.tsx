@@ -183,6 +183,34 @@ export const Header = memo(function Header(props: HeaderProps) {
                     </a>
                 ))}
             </div>
+            <div className="block-contacts">
+                <div className="std-wrapper">
+                    <div id="header_block_contacts">
+                        <div>
+                            <div className="std-title-m">
+                                <span className="std-icon std-icon-connect"></span>
+                                <div>
+                                    Подключение:{' '}
+                                    <a href="tel:+74957890915">
+                                        +7 (495) 789-09-15
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="std-title-m">
+                                <span className="std-icon std-icon-support"></span>
+                                <div>
+                                    Техподдержка:{' '}
+                                    <a href="tel:+74957890916">
+                                        +7 (495) 789-09-16
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
     );
 });

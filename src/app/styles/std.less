@@ -57,6 +57,27 @@
             background-size: 36px 36px;
         }
     }
+
+    &.std-icon-connect {
+        &::before {
+            background-image: url('/icons/connect.svg');
+            background-size: 30px 19px;
+        }
+    }
+
+    &.std-icon-support {
+        &::before {
+            background-image: url('/icons/support.svg');
+            background-size: 30px 30px;
+        }
+    }
+
+    &.std-icon-phone {
+        &::before {
+            background-image: url('/icons/phone_icon.svg');
+            background-size: 30px 30px;
+        }
+    }
 }
 
 .std-title-wi {
@@ -76,6 +97,32 @@
     .width-size-sm({
         > div {
             font-size:22px;
+            padding:0 0 0 10px;
+        }
+    });
+}
+
+.std-title-m {
+    display: flex;
+    align-items: center;
+
+    > span {
+        flex-shrink: 0;
+    }
+
+    > div {
+        padding: 0 0 0 20px;
+        font-size: 22px;
+        font-weight: bold;
+
+        a {
+            color: #colors[red];
+        }
+    }
+
+    .width-size-sm({
+        > div {
+            font-size:18px;
             padding:0 0 0 10px;
         }
     });

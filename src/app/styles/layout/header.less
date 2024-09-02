@@ -15,8 +15,8 @@ header {
                 > .logo {
                     flex-shrink: 0;
                     width: 194px;
-                    height: 48px;
-                    background: url('/icons/logo_Datafon.svg') no-repeat;
+                    height: 53px;
+                    background: url('/icons/logo_Datafon_2.svg') no-repeat;
                     background-size: 100% 100%;
                 }
 
@@ -122,6 +122,10 @@ header {
         }
     }
 
+    .block-contacts {
+        padding: 30px 0 15px;
+    }
+
     .width-size(
         1200px, 
         {
@@ -194,6 +198,12 @@ header {
             }
         }
     );
+
+    .width-size-sm({
+        .block-contacts {
+            padding: 10px 0 0 0;
+        }
+    });
 }
 
 .width-size(
@@ -256,3 +266,21 @@ header {
         }
     }
 );
+
+#header_block_contacts {
+    padding: 30px 75px;
+    background: #f6f8fc;
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+
+    .width-size-sm({
+        padding:20px;
+
+        a {
+            display: block
+        }
+    });
+}
